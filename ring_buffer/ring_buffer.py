@@ -58,7 +58,7 @@ class RingBuffer:
             # got to the next node
             first_node = first_node.next
 
-        #since the while loop stops of the last node i just 
+        # since the while loop stops on the last node I just 
         # appened the tail to the list
         # TODO there is probably a better way to do this    
         list_buffer_contents.append(self.storage.tail.value)
