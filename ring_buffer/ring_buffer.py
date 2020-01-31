@@ -17,15 +17,27 @@ class RingBuffer:
 
             #if the current node is the tail 
             if self.current == self.storage.tail:
-
+                #set current to head
                 self.current = self.storage.head
+
+                #remove the tail item
                 self.storage.remove_from_tail()
+
+                #add the new tail
                 self.storage.add_to_tail(item)
 
             else:
+                #set the current to the next item
                 self.current = self.current.next
+
+                #insert the new item where the prev item was
                 prev_current.insert_after(item)
+
+                #delete the prev item
                 self.storage.delete(prev_current)
+
+                # insert after dosent add to the DLL size
+                #TODO refacture to not do this
                 self.storage.length += 1
         else:
              self.storage.add_to_tail(item)
