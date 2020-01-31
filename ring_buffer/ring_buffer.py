@@ -46,11 +46,23 @@ class RingBuffer:
         list_buffer_contents = []
 
         # TODO: Your code here
+        
+        #make a var for the head
         first_node = self.storage.head
+
+        #while there is a next node
         while first_node.next:
+            #append the node to the list
             list_buffer_contents.append(first_node.value)
+
+            # got to the next node
             first_node = first_node.next
+
+        #since the while loop stops of the last node i just 
+        # appened the tail to the list
+        # TODO there is probably a better way to do this    
         list_buffer_contents.append(self.storage.tail.value)
+
         return list_buffer_contents
 
 

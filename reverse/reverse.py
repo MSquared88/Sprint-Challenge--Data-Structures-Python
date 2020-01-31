@@ -56,22 +56,4 @@ class LinkedList:
 			current = reverse_next
 			
 		self.head = prev 
-		
-sll = LinkedList()
-
-sll.add_to_head(1)
-sll.add_to_head(2)
-sll.add_to_head(3)
-sll.add_to_head(4)
-sll.add_to_head(5)
-
-sll.reverse_list()
-print(sll.head.value)
-print(sll.head.next_node)
-# print(sll.head.next_node.next_node.value)
-# print(sll.head.next_node.next_node.next_node.value)
-# print(sll.head.next_node.next_node.next_node.next_node.value)
-# print(sll.head.next_node.next_node.next_node.next_node.next_node.value)
-
-
 
